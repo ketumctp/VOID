@@ -25,6 +25,5 @@ dist-ssr
 
 # Backup and development files
 unused-backup/
-*.zip
 .env
 .env.*
