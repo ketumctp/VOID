@@ -93,7 +93,7 @@ The built extension will be in the `dist/` directory.
 
 ## Demo
 
-![Demo Video](demo.mp4)
+https://github.com/ketumctp/VOID/raw/main/demo.mp4
 
 
 
