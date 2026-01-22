@@ -93,9 +93,9 @@ The built extension will be in the `dist/` directory.
 
 ## Demo
 
-<div align="center">
-  <video src="https://github.com/ketumctp/VOID/raw/main/demo.mp4" width="100%" controls></video>
-</div>
+[Nonton Video Demo di Sini](https://github.com/ketumctp/VOID/blob/main/demo.mp4?raw=true)
+
+<video src="demo.mp4" width="100%" controls></video>
 
 
 
