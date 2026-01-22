@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VOID BRAND KIT</title>
+    <style>
+        :root {
+            --bg: #0f0f11;
+            --surface: #18191c;
+            --cream: #e8e3d5;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--cream);
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            font-family: 'Outfit', sans-serif;
+            letter-spacing: 8px;
+            text-transform: uppercase;
+            margin-bottom: 50px;
+            border-bottom: 2px solid #333;
+            padding-bottom: 20px;
+            width: 100%;
+            text-align: center;
+        }
+
+        section {
+            width: 100%;
+            max-width: 1000px;
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            opacity: 0.5;
+            margin-bottom: 20px;
+            border-left: 3px solid var(--cream);
+            padding-left: 10px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--surface);
+            border-radius: 12px;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 180px;
+            border: 1px solid #222;
+        }
+
+        .label {
+            margin-top: 20px;
+            font-size: 10px;
+            font-family: monospace;
+            opacity: 0.6;
+        }
+
+        svg {
+            fill: var(--cream);
+            width: 80px;
+            height: 80px;
+        }
+
+        /* Typography Mock */
+        .font-outfit {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+        }
+
+        .font-inter {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Outfit:wght@500;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <h1>VOID Brand Kit</h1>
+
+    <!-- 1. LOGO VARIATIONS -->
+    <section>
+        <div class="section-title">1. Logo Variations (Hard Poly)</div>
+        <div class="grid">
+            <div class="card">
+                <svg viewBox="0 0 24 24">
+                    <path d="M2 2L12 22L22 2H16L12 10L8 2H2ZM12 14L15 8H9L12 14Z" fill-rule="evenodd" />
+                </svg>
+                <div class="label">Primary Mark</div>
+            </div>
+            <div class="card" style="background: #e8e3d5;">
+                <svg viewBox="0 0 24 24" style="fill: #0f0f11;">
+                    <path d="M2 2L12 22L22 2H16L12 10L8 2H2ZM12 14L15 8H9L12 14Z" fill-rule="evenodd" />
+                </svg>
+                <div class="label">Inverted (On Light)</div>
+            </div>
+            <div class="card">
+                <svg viewBox="0 0 24 24" style="fill: none; stroke: #e8e3d5; stroke-width: 1;">
+                    <path d="M2 2L12 22L22 2H16L12 10L8 2H2ZM12 14L15 8H9L12 14Z" fill-rule="evenodd" />
+                </svg>
+                <div class="label">Wireframe</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. LOGO + WORDMARK -->
+    <section>
+        <div class="section-title">2. Logo + Wordmark</div>
+        <div class="grid">
+            <div class="card" style="flex-direction: row; gap: 20px; grid-column: span 2;">
+                <svg viewBox="0 0 24 24" style="height: 48px; width: 48px;">
+                    <path d="M2 2L12 22L22 2H16L12 10L8 2H2ZM12 14L15 8H9L12 14Z" fill-rule="evenodd" />
+                </svg>
+                <span class="font-outfit" style="font-size: 42px; letter-spacing: 4px;">VOID</span>
+                <div class="label" style="position: absolute; bottom: 10px; left: 20px;">Horizontal Lockup</div>
+            </div>
+            <div class="card">
+                <svg viewBox="0 0 512 512" style="width: 100%; height: auto; max-width: 180px;">
+                    <g transform="translate(112, 80) scale(12)">
+                        <path d="M2 2L12 22L22 2H16L12 10L8 2H2ZM12 14L15 8H9L12 14Z" fill="#e8e3d5"
+                            fill-rule="evenodd" />
+                    </g>
+                    <text x="256" y="420" font-family="'Outfit', 'Inter', sans-serif" font-weight="bold" font-size="72"
+                        textLength="240" lengthAdjust="spacing" fill="#e8e3d5" text-anchor="middle">VOID</text>
+                </svg>
+                <div class="label">Vertical Stack (Balanced)</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. COLORS -->
+    <section>
+        <div class="section-title">3. Colors (Warm Noir)</div>
+        <div class="grid">
+            <div class="card" style="background: #0f0f11; align-items: flex-start; justify-content: flex-end;">
+                <div style="font-family: monospace; font-size: 12px; color: #fff;">
+                    VOID BLACK<br>#0f0f11
+                </div>
+            </div>
+            <div class="card" style="background: #e8e3d5; align-items: flex-start; justify-content: flex-end;">
+                <div style="font-family: monospace; font-size: 12px; color: #000;">
+                    MOCHA CREAM<br>#e8e3d5
+                </div>
+            </div>
+            <div class="card" style="background: #18191c; align-items: flex-start; justify-content: flex-end;">
+                <div style="font-family: monospace; font-size: 12px; color: #fff;">
+                    SURFACE<br>#18191c
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. LOGO PAIRING -->
+    <section>
+        <div class="section-title">4. Logo Pairing (Context)</div>
+        <div class="card" style="min-height: 300px; justify-content: center; position: relative; overflow: hidden;">
+            <!-- Mock App Header -->
+            <div
+                style="position: absolute; top: 0; left: 0; right: 0; height: 60px; border-bottom: 1px solid #333; display: flex; align-items: center; padding: 0 20px; justify-content: space-between;">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <svg viewBox="0 0 24 24" style="width: 24px; height: 24px;">
+                        <path d="M2 2L12 22L22 2H16L12 10L8 2H2ZM12 14L15 8H9L12 14Z" fill-rule="evenodd" />
+                    </svg>
+                    <span class="font-outfit" style="font-size: 16px; letter-spacing: 2px;">VOID</span>
+                </div>
+                <div style="width: 30px; height: 30px; background: #222; border-radius: 50%;"></div>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <h2 class="font-outfit" style="font-size: 32px; margin: 0;">$12,450.00</h2>
+                <p class="font-inter" style="color: #666; font-size: 14px; margin-top: 5px;">Total Balance</p>
+            </div>
+
+            <div class="label" style="position: absolute; bottom: 20px;">App Header Implementation</div>
+        </div>
+    </section>
+
+    <!-- 5. TYPOGRAPHY -->
+    <section>
+        <div class="section-title">5. Typography</div>
+        <div class="grid">
+            <!-- Primary Font -->
+            <div class="card" style="align-items: flex-start; text-align: left;">
+                <h3 class="font-outfit" style="font-size: 32px; margin: 0 0 10px 0;">Aa</h3>
+                <div style="font-family: 'Outfit', sans-serif; font-size: 24px; font-weight: 700;">Outfit</div>
+                <div style="opacity: 0.6; font-size: 14px; margin-top: 5px;">Primary / Headings / Logo</div>
+                <div style="margin-top: 20px; font-size: 14px; line-height: 1.6;">
+                    Used for the "VOID" logotype and major section headers.<br>
+                    <strong>Weights:</strong> Bold (700), Medium (500)
+                </div>
+            </div>
+
+            <!-- Secondary Font -->
+            <div class="card" style="align-items: flex-start; text-align: left;">
+                <h3 class="font-inter" style="font-size: 32px; margin: 0 0 10px 0;">Aa</h3>
+                <div style="font-family: 'Inter', sans-serif; font-size: 24px; font-weight: 400;">Inter</div>
+                <div style="opacity: 0.6; font-size: 14px; margin-top: 5px;">Secondary / Body / UI</div>
+                <div style="margin-top: 20px; font-size: 14px; line-height: 1.6;">
+                    Standard typeface for all UI text, paragraphs, and labels.<br>
+                    <strong>Weights:</strong> Regular (400), SemiBold (600)
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. LOGO CONSTRUCTION -->
+    <section>
+        <div class="section-title">6. Logo Construction Rules</div>
+        <div class="card" style="flex-direction: row; gap: 40px; align-items: flex-start;">
+            <div style="flex: 1;">
+                <h4 class="font-outfit" style="margin: 0 0 10px 0;">Grid System</h4>
+                <ul style="opacity: 0.8; font-size: 14px; line-height: 1.8; padding-left: 20px;">
+                    <li><strong>Canvas:</strong> 512x512px viewbox.</li>
+                    <li><strong>Center Axis:</strong> X=256 (Cyan Guide).</li>
+                    <li><strong>Icon Width:</strong> 240px (Visual Bounds).</li>
+                    <li><strong>Text Alignment:</strong> Force Justified using <code>textLength="240"</code>.</li>
+                    <li><strong>Vertical Balance:</strong> Text positioned at Y=420 (Goldilocks Zone).</li>
+                </ul>
+            </div>
+            <div style="flex: 1; border-left: 1px solid #333; padding-left: 40px;">
+                <h4 class="font-outfit" style="margin: 0 0 10px 0;">Clear Space</h4>
+                <p style="opacity: 0.8; font-size: 14px; line-height: 1.6;">
+                    Always maintain a minimum clear space of <strong>24px</strong> (1x module) around the logo to ensure
+                    legibility and impact.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. MASTER ASSET (GRID) -->
+    <section>
+        <div class="section-title">7. Master Asset (Construction Grid)</div>
+        <div class="card" style="align-items: center; background: #000; border: 1px dashed #333;">
+            <!-- Embedded logo.svg content -->
+            <svg viewBox="0 0 512 512" style="width: 100%; height: auto; max-width: 400px;">
+                <defs>
+                    <style>
+                        .grid-line {
+                            stroke-width: 1;
+                            vector-effect: non-scaling-stroke;
+                        }
+
+                        .center-axis {
+                            stroke: #00FFFF;
+                            opacity: 0.8;
+                        }
+
+                        /* Cyan */
+                        .icon-bounds {
+                            stroke: #FF00FF;
+                            opacity: 0.6;
+                            stroke-dasharray: 4 2;
+                        }
+
+                        /* Magenta */
+                        .text-guides {
+                            stroke: #FFFF00;
+                            opacity: 0.6;
+                        }
+
+                        /* Yellow */
+                    </style>
+                </defs>
+                <rect width="512" height="512" fill="#0f0f11" />
+                <line x1="256" y1="0" x2="256" y2="512" class="grid-line center-axis" stroke-width="2" />
+                <line x1="136" y1="50" x2="136" y2="460" class="grid-line icon-bounds" />
+                <line x1="376" y1="50" x2="376" y2="460" class="grid-line icon-bounds" />
+                <line x1="100" y1="104" x2="412" y2="104" class="grid-line icon-bounds" />
+                <line x1="100" y1="344" x2="412" y2="344" class="grid-line icon-bounds" />
+                <line x1="100" y1="370" x2="412" y2="370" class="grid-line text-guides" />
+                <line x1="100" y1="420" x2="412" y2="420" class="grid-line text-guides" />
+                <g transform="translate(112, 80) scale(12)">
+                    <path d="M2 2L12 22L22 2H16L12 10L8 2H2ZM12 14L15 8H9L12 14Z" fill="#e8e3d5" fill-rule="evenodd" />
+                </g>
+                <text x="256" y="420" font-family="'Outfit', 'Inter', sans-serif" font-weight="bold" font-size="72"
+                    textLength="240" lengthAdjust="spacing" fill="#e8e3d5" text-anchor="middle">VOID</text>
+            </svg>
+            <div class="label" style="margin-top: 20px;">Master Construction File (logo.svg)</div>
+            <div style="margin-top: 10px; font-family: monospace; font-size: 12px; color: #666;">
+                /home/sptnode/.gemini/antigravity/scratch/transferrialo/walletrialo/logo.svg</div>
+        </div>
+
+        <!-- Spacer -->
+        <div style="height: 40px;"></div>
+
+        <!-- Horizontal Lockup -->
+        <div class="card" style="align-items: center; background: #000; border: 1px dashed #333;">
+            <svg viewBox="0 0 512 256" style="width: 100%; height: auto; max-width: 600px;">
+                <defs>
+                    <style>
+                        .grid-line {
+                            stroke-width: 1;
+                            vector-effect: non-scaling-stroke;
+                        }
+
+                        .center-axis {
+                            stroke: #00FFFF;
+                            opacity: 0.8;
+                            stroke-dasharray: 8 4;
+                        }
+
+                        .icon-bounds {
+                            stroke: #FF00FF;
+                            opacity: 0.6;
+                            stroke-dasharray: 4 2;
+                        }
+
+                        .text-guides {
+                            stroke: #FFFF00;
+                            opacity: 0.6;
+                        }
+
+                        .clear-space {
+                            stroke: #00FF00;
+                            opacity: 0.3;
+                            stroke-dasharray: 2 2;
+                        }
+                    </style>
+                </defs>
+                <rect width="512" height="256" fill="#0f0f11" />
+                <line x1="0" y1="128" x2="512" y2="128" class="grid-line center-axis" />
+                <line x1="256" y1="0" x2="256" y2="256" class="grid-line center-axis" />
+                <g transform="translate(86, 74) scale(4.5)">
+                    <path d="M2 2L12 22L22 2H16L12 10L8 2H2ZM12 14L15 8H9L12 14Z" fill="#e8e3d5" fill-rule="evenodd" />
+                </g>
+                <line x1="95" y1="83" x2="185" y2="83" class="grid-line icon-bounds" />
+                <line x1="95" y1="173" x2="185" y2="173" class="grid-line icon-bounds" />
+                <line x1="95" y1="83" x2="95" y2="173" class="grid-line icon-bounds" />
+                <line x1="185" y1="83" x2="185" y2="173" class="grid-line icon-bounds" />
+                <text x="225" y="152" font-family="'Outfit', 'Inter', sans-serif" font-weight="bold" font-size="84"
+                    letter-spacing="6" fill="#e8e3d5" text-anchor="start">VOID</text>
+                <line x1="220" y1="92" x2="480" y2="92" class="grid-line text-guides" />
+                <line x1="220" y1="152" x2="480" y2="152" class="grid-line text-guides" />
+                <line x1="205" y1="50" x2="205" y2="206" class="grid-line clear-space" />
+            </svg>
+            <div class="label" style="margin-top: 20px;">Horizontal Master Lockup (logo-horizontal.svg)</div>
+            <div style="margin-top: 10px; font-family: monospace; font-size: 12px; color: #666;">
+                /home/sptnode/.gemini/antigravity/scratch/transferrialo/walletrialo/logo-horizontal.svg</div>
+        </div>
+    </section>
+
+</body>
+
+</html>

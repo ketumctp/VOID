@@ -1,0 +1,419 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* --- Spacing System (4px Base) --- */
+:root {
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-6: 24px;
+    --space-8: 32px;
+    --space-12: 48px;
+
+    /* Typography Scale */
+    --text-xs: 0.75rem;
+    /* 12px */
+    --text-sm: 0.875rem;
+    /* 14px */
+    --text-base: 1rem;
+    /* 16px */
+    --text-lg: 1.25rem;
+    /* 20px */
+    --text-xl: 1.5rem;
+    /* 24px */
+    --text-2xl: 2rem;
+    /* 32px */
+
+    /* Leading (Line Height) */
+    --leading-tight: 1.2;
+    --leading-normal: 1.5;
+    --leading-relaxed: 1.6;
+
+    /* Theme Colors */
+    --bg-deep: #0f0f11;
+    --surface: #18191c;
+    --bg-gradient-start: #27272a;
+    --bg-gradient-end: #09090b;
+
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --glass-surface: rgba(24, 25, 28, 0.85);
+    /* Matches --surface with opacity */
+    --glass-highlight: rgba(255, 255, 255, 0.1);
+
+    /* Brand Colors */
+    --text-primary: #e8e3d5;
+    /* Mocha Cream */
+    --text-secondary: #a1a1aa;
+    --text-muted: #71717a;
+
+    --accent-glow: rgba(232, 227, 213, 0.1);
+    --success: #10b981;
+    --danger: #ef4444;
+
+    --font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --radius: 16px;
+}
+
+html {
+    min-width: 375px;
+    min-height: 600px;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-family);
+    background-color: var(--bg-deep);
+    /* Lighter global gradient */
+    background-image: radial-gradient(circle at 50% -20%, var(--bg-gradient-start), var(--bg-gradient-end) 100%);
+    background-attachment: fixed;
+    color: var(--text-primary);
+    -webkit-font-smoothing: antialiased;
+
+    /* Full Screen Centering Logic */
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#root {
+    display: contents;
+}
+
+/* --- Layout Utilities (For Spacing Consistency) --- */
+
+.stack {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    /* Default 16px gap */
+}
+
+.stack-small {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    /* 8px gap */
+}
+
+.stack-large {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+    /* 32px gap */
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.mt-auto {
+    margin-top: auto;
+}
+
+.mb-2 {
+    margin-bottom: var(--space-2);
+}
+
+.mb-4 {
+    margin-bottom: var(--space-4);
+}
+
+.mb-6 {
+    margin-bottom: var(--space-6);
+}
+
+.mb-8 {
+    margin-bottom: var(--space-8);
+}
+
+/* --- Typography & Elements --- */
+
+h1,
+h2,
+h3 {
+    margin: 0;
+    font-weight: 600;
+    color: var(--text-primary);
+    line-height: var(--leading-tight);
+    letter-spacing: -0.02em;
+}
+
+h1 {
+    font-size: var(--text-2xl);
+}
+
+h2 {
+    font-size: var(--text-lg);
+}
+
+h3 {
+    font-size: var(--text-base);
+    font-weight: 500;
+}
+
+p {
+    margin: 0;
+    line-height: var(--leading-relaxed);
+    color: var(--text-muted);
+    font-size: var(--text-sm);
+}
+
+.text-secondary {
+    color: var(--text-secondary);
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: var(--radius);
+    padding: var(--space-4);
+    font-weight: 600;
+    font-size: var(--text-base);
+    font-family: var(--font-family);
+    transition: all 0.2s ease;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1;
+}
+
+.btn-primary {
+    background: var(--text-primary);
+    color: #000000;
+    border: 1px solid var(--text-primary);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary:hover {
+    background: #fff;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(255, 255, 255, 0.15);
+}
+
+.glass-button {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-primary);
+    backdrop-filter: blur(4px);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-button:hover:not(:disabled) {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--text-primary);
+    transform: translateY(-1px);
+}
+
+/* --- Form System --- */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    /* 8px between label and input */
+    margin-bottom: var(--space-4);
+}
+
+label {
+    display: block;
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+/* Consolidated Input Styles */
+input,
+select,
+textarea,
+.glass-input {
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--glass-border);
+    color: var(--text-primary);
+    border-radius: 12px;
+    padding: var(--space-3) var(--space-4);
+    /* 12px vertical, 16px horizontal */
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+    font-family: var(--font-family);
+    font-size: var(--text-base);
+    outline: none;
+    margin: 0;
+    /* Reset margins in favor of stack/gap */
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--text-primary);
+    background: rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+/* --- Specific Components --- */
+
+.container {
+    width: 375px;
+    height: 600px;
+    margin: 0;
+    padding: var(--space-8);
+    /* 32px Breathing Room */
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    overflow-y: auto;
+
+    background: var(--glass-surface);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    box-shadow: none;
+    border-radius: 0px;
+    /* FIXED: No rounded corners on main container */
+    border: none;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.balance-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 150px;
+    background: var(--accent-glow);
+    filter: blur(80px);
+    z-index: -1;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.skeleton {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.05) 100%);
+    background-size: 200% 100%;
+    animation: skeleton 1.5s ease-in-out infinite;
+    border-radius: 6px;
+}
+
+@keyframes skeleton {
+    0% {
+        background-position: 200% 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.99);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeInScale 0.2s ease-out forwards;
+}
+
+/* --- Modern UI Components --- */
+
+.action-circle {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--bg-gradient-start);
+    border: 1px solid var(--glass-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+    transition: all 0.2s ease;
+    color: var(--text-primary);
+}
+
+.action-circle:hover {
+    background: var(--text-primary);
+    color: var(--bg-deep);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+}
+
+.action-label {
+    font-size: 12px;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.bottom-nav {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 64px;
+    background: rgba(15, 15, 17, 0.95);
+    backdrop-filter: blur(20px);
+    border-top: 1px solid var(--glass-border);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 100;
+    padding-bottom: env(safe-area-inset-bottom);
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    color: var(--text-secondary);
+    background: none;
+    border: none;
+    padding: 8px;
+    width: 64px;
+}
+
+.nav-item.active {
+    color: var(--text-primary);
+}
+
+.nav-item.active svg {
+    fill: currentColor;
+    fill-opacity: 0.2;
+}
