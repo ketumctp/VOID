@@ -93,7 +93,7 @@ The built extension will be in the `dist/` directory.
 
 ## Demo
 
-https://raw.githubusercontent.com/ketumctp/VOID/refs/heads/main/demo.mp4
+https://github.com/user-attachments/assets/b918dda0-167f-4f93-bc2e-bab72dc6213a
 
 
 
@@ -130,6 +130,10 @@ src/
 ## Security
 
 - All private keys are encrypted with AES-GCM
+
+
+
+
 - Keys never leave the extension context
 - Transaction simulation before signing
 - Risk assessment for unknown programs
