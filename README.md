@@ -1,4 +1,4 @@
-[dist.zip](https://github.com/user-attachments/files/24811149/dist.zip)# VOID Wallet
+# VOID Wallet
 
 A secure browser extension wallet for the Rialo blockchain.
 
