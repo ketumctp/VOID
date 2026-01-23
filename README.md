@@ -43,7 +43,7 @@ This wallet is designed exclusively for **Rialo Devnet** testing purposes:
 
 ## Installing the Latest Release
 
-Grab the latest `[dist.zip](https://github.com/user-attachments/files/24811151/dist.zip)` 
+Grab the latest [dist.zip](https://github.com/user-attachments/files/24811151/dist.zip)
 
 
 ## Developing Locally
